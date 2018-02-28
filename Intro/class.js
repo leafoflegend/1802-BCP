@@ -1,5 +1,4 @@
 const chalk = require('chalk');
-const axios = require('axios');
 
 const returnRandomColor = () => {
   const colors = ['red', 'cyan', 'magenta', 'green', 'yellow'];
