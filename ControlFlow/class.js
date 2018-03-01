@@ -179,11 +179,14 @@ const finalFunction = (someArg) => {
 
 function doSomething() {};
 
-c(doSomething());
+// c(doSomething());
 
 // We get undefined...
 
 // undefined is an actual type and value though, so something is being returned...
 // Example:
 
-console.log(nonExistentThing);
+// console.log(nonExistentThing);
+// ReferenceError
+
+// What functions do is, if you forgot to put a return in a function the function itself will automatically return undefined.
