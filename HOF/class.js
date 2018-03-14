@@ -271,7 +271,8 @@ myAccount.withdraw(5000);
 
 // I highly highly suggest reading Kyle Simpsons Scopes and Closures for more information, its free online on Github if you can stand to read a large PDF. But he does sell paperbacks.
 
-
+// Callbacks are when we give a function to another function to use later - in return for some sort of promise: normally, when it will be called, and with what data.
+// Closure and returning functions is about bringing data from one scope into another in a protected way.
 
 
 
