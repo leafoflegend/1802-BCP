@@ -165,9 +165,9 @@ function genLoggersWrong(length) {
   var funcArray = [];
 
   for (var i = 0; i < length; ++i) {
-    funcArray.push(function() {
+    funcArray.push((function() {
       return x;
-    })
+    })())
   }
 
   return funcArray;
@@ -204,7 +204,13 @@ function genLoggersES5(length) {
 // what if we used es6?
 // ES6 Right Solution
 
-function genLoggers(length) {
+// let introduces 'block scope'
+// And what this means, is that whatever curly brace a let is involved in, is its own scope.
+// In the case of a for loop, we just made the for loops body its own scope -> meaning its doing the same thing a function does
+// Its creating a closed over scope inside each loop of the for loop.
+// We are creating closure without writing another function.
+// You dont have to understand any of that. You just have to stop using var.
+function genLoggersES6(length) {
   var funcArray = [];
 
   for (let i = 0; i < length; ++i) {
@@ -217,5 +223,5 @@ function genLoggers(length) {
 }
 
 var loggerArray = genLoggers(5);
-c(loggerArray[0]());    // 0
-c(loggerArray[4]());    // 4
+// c(loggerArray[0]());    // 0
+// c(loggerArray[4]());    // 4
